@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hi</title>
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+        background: black;
+    }
+
+    ul {
+        margin: 150px auto 0;
+        padding: 0;
+        list-style: none;
+        display: table;
+        width: 600px;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    li {
+        display: table-cell;
+        position: relative;
+        padding: 15px 0;
+    }
+
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+
+    a:hover:after {
+        width: 100%;
+        left: 0;
+    }
+
+    @media screen and (max-height: 300px) {
+        ul {
+            margin-top: 40px;
+        }
+    }
+
+    @keyframes rainbow {
+        0% {
+            color: #0000ff;
+        }
+
+        /* Blue */
+        14% {
+            color: #3399ff;
+        }
+
+        /* Light Blue */
+        28% {
+            color: #66ccff;
+        }
+
+        /* Sky Blue */
+        42% {
+            color: #99ccff;
+        }
+
+        /* Pale Blue */
+        57% {
+            color: #cceeff;
+        }
+
+        /* Very Light Blue */
+        71% {
+            color: #e6f7ff;
+        }
+
+        /* Almost White Blue */
+        85% {
+            color: #ffffff;
+        }
+
+        /* White */
+        100% {
+            color: #0000ff;
+        }
+
+        /* Back to Blue */
+    }
+
+    @keyframes type {
+        0% { width: 0; }
+        100% { width: 100%; } /* Smooth transition to full width */
+    }
+
+    .animated-text {
+        animation: rainbow 3s infinite, type 5s ease-in-out infinite; /* Decreased duration for typewriting effect to 5s */
+        white-space: nowrap; /* Prevents text from wrapping */
+        overflow: hidden; /* Hides the overflow */
+        /* border-right: 2px solid #fff; */ /* Removed cursor effect */
+    }
+
+    /* From Uiverse.io by reshades */
+    .button {
+        background-color: #ffffff00;
+        color: #fff;
+        width: 10em; /* {{ edit_1 }} Decreased width */
+        height: 3em; /* {{ edit_2 }} Decreased height */
+        font-size: 1.2em; /* {{ edit_3 }} Decreased font size */
+        border: #3654ff 0.2em solid;
+        border-radius: 33px;
+        text-align: right;
+        transition: all 0.6s ease;
+        margin-top: 20px;
+        margin-left: 45px; /* {{ edit_4 }} Added margin-left to shift button right */
+    }
+
+    .button:hover {
+        background-color: #3654ff;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .button svg {
+        width: 1.6em;
+        margin: -0.2em 0.8em 1em;
+        position: absolute;
+        display: flex;
+        transition: all 0.6s ease;
+    }
+
+    .button:hover svg {
+        transform: translateX(5px);
+    }
+
+    .text {
+        margin: 0 1.5em
+    }
+
+    .social-button {
+        /* Removed hover effect */
+        transition: none; /* {{ edit_1 }} */
+        text-decoration: none; /* {{ edit_2 }} Added to remove underline effect */
+    }
+</style>
+
+<body style="display: flex; justify-content: center; height: 100vh; margin: 0; background-color: #000;">
+    <div class="main" style="display: flex; align-items: center;"> <!-- {{ edit_1 }} Added flex display for alignment -->
+        <div style="flex: 1;"> <!-- {{ edit_2 }} Added a container for text -->
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <h1 class="animated-text" style="text-align: left; color: #fff; font-size: 51px; margin-left: 50px;">Hi!! I am
+                Debanjan Halder</h1>
+            <p style="text-align: left; color: #fff; margin-left: 50px; margin-right: 50px; font-weight: 400;">As a computer
+                science student, you’re diving into a field that
+                combines problem-solving, creativity, and logic. The skills you're developing—from programming to algorithms
+                and systems design—will equip you to tackle real-world challenges and innovate in a rapidly evolving tech
+                landscape. Stay curious, embrace challenges, and continually build your knowledge, as the technology you
+                learn today will evolve. Collaboration, critical thinking, and persistence will be your keys to success.
+            </p>
+            <button class="button"> <!-- {{ edit_3 }} Moved button under the paragraph -->
+                <svg class="w-6 h-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" stroke-linejoin="round" stroke-linecap="round">
+                    </path>
+                </svg>
+                <div class="text">
+                    C.V
+                </div>
+            </button>
+            <div class="social-media-buttons" style="text-align: left; margin-left: 300px; font-size: 30px; margin-bottom: 100px;"> <!-- {{ edit_4 }} Moved social media icons under the button -->
+                <a href="#" class="social-button"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                <a href="#" class="social-button"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="social-button"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div style="flex: 1; text-align: right; margin-right: 50px;"> <!-- {{ edit_5 }} Added a container for the image -->
+            <img src="IMG_20240213_135425-removebg-preview.png" alt="Your Description" style="max-width: 100%; height: auto;"> <!-- {{ edit_6 }} Added image with white drop shadow -->
+        </div>
+        {{ edit_7 }} <!-- End of added content -->
+    </div>
+</body>
+
+</html>
